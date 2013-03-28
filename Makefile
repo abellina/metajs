@@ -9,7 +9,7 @@ browser: $(BROWSER_COFFEE:.coffee=.js) browser/bundle.js
 test: $(TESTS:.js=.result) $(ES6TESTS:.js=.result) $(LIB_JS)
 	echo $(LIB_JS)
 
-clean: 	browser/*.js
+clean: 	lib/*.js browser/*.js
 	rm $? 
 
 %.actual: %.js $(LIB_JS) repl.js
